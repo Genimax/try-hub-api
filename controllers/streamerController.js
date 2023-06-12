@@ -26,8 +26,9 @@ export default async function (req, res) {
     }
   } catch (e) {
     console.log(e);
-    res.status(500).send({
-      message: "Error during Twitch search request...",
+    res.status(500).json({
+      found: false,
+      message: "Error during search request...",
       error: e,
     });
   }

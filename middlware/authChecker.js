@@ -13,6 +13,7 @@ const authChecker = async (req, res, next) => {
       })
         .then((response) => response.json())
         .then((response) => {
+          // console.log(response.access_token);
           process.env.TOKEN = response.access_token;
           process.env.TOKEN_LIFETIME_TILL =
             Date.now() + response.expires_in * 1000;
