@@ -22,7 +22,7 @@ export default async function (req, res) {
         icon: data[0].profile_image_url,
       });
     } else {
-      res.status(404).json({ found: false, nickname });
+      res.status(200).json({ found: false, nickname });
     }
   } catch (e) {
     console.log(e);
