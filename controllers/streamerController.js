@@ -26,10 +26,8 @@ export default async function (req, res) {
     }
   } catch (e) {
     console.log(e);
-    res.status(500).json({
+    res.status(200).json({
       found: false,
-      message: "Error during search request...",
-      error: e,
     });
   }
 }
